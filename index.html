@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kèo Thơm Fen Ơi!</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; text-align: center; background-color: #f0f2f5; padding-top: 50px; }
+        .container { background: white; padding: 30px; border-radius: 15px; display: inline-block; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { color: #d32f2f; }
+        button { padding: 15px 30px; margin: 10px; font-size: 18px; cursor: pointer; border: none; border-radius: 8px; transition: 0.3s; }
+        #btn-yes { background-color: #4CAF50; color: white; }
+        #btn-no { background-color: #f44336; color: white; }
+        #message { margin-top: 20px; font-size: 22px; font-weight: bold; color: #333; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🍻 Chiều nay làm vài ly không mấy fen?</h1>
+    <p>Kèo này không say không về nhé!</p>
+    
+    <button id="btn-yes" onclick="showResult('yes')">Có ✅</button>
+    <button id="btn-no" onclick="showResult('no')">Không ❌</button>
+
+    <div id="message"></div>
+</div>
+
+<script>
+    function showResult(choice) {
+        const msg = document.getElementById('message');
+        if (choice === 'yes') {
+            msg.innerHTML = "Em tính hết Xiền, Bao nhé! 💸🍻 <br> <small>(Chốt đơn, cấm quay xe!)</small>";
+            msg.style.color = "#2e7d32";
+        } else {
+            msg.innerHTML = "Buồn vậy 😞 thôi mà nhậu đi 🍻 <br> <small>(Bấm lại nút kia đi fen...)</small>";
+            msg.style.color = "#c62828";
+        }
+    }
+</script>
+
+</body>
+</html>
